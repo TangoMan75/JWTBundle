@@ -8,7 +8,7 @@ use Firebase\JWT\JWT as Codec;
 /**
  * Class JWTService
  *
- * @package AppBundle\Services
+ * @package TangoMan\JWTBundle\Services
  */
 class JWTService
 {
