@@ -1,15 +1,15 @@
 {
     "name": "tangoman/jwt-bundle",
     "description": "JWT Service Symfony Bundle",
-    "version": "1.0.1",
-    "license": "GPL-3.0",
+    "version": "1.0.2",
+    "license": "MIT",
     "authors": [
         {
             "name": "Matthias Morin",
-            "email": "tangoman@free.fr"
+            "email": "matthias.morin@gmail.com"
         }
     ],
-    "type": "library",
+    "type": "symfony-bundle",
     "keywords": [
         "JWT",
         "Json",
