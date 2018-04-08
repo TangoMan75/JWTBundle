@@ -1,4 +1,10 @@
 <?php
+/**
+ * Copyright (c) 2018 Matthias Morin <matthias.morin@gmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
 
 namespace TangoMan\JWTBundle\Services;
 
@@ -12,6 +18,7 @@ use Firebase\JWT\JWT as Codec;
  */
 class JWTService
 {
+
     /**
      * @var string
      */
@@ -36,7 +43,7 @@ class JWTService
     public function encode(JWT $jwt)
     {
         $this->jwt = $jwt;
-        $token = Codec::encode($jwt->getClaims(), $this->secret);
+        $token     = Codec::encode($jwt->getClaims(), $this->secret);
 
         return $token;
     }
@@ -60,8 +67,8 @@ class JWTService
         }
 
         list($header, $payload, $signature) = explode(".", $token);
-        $header = base64_decode($header);
-        $payload = json_decode(base64_decode($payload));
+        $header    = base64_decode($header);
+        $payload   = json_decode(base64_decode($payload));
         $signature = base64_decode($signature);
 
         // Retrieves start and end public claims other claims are going to be ignored
